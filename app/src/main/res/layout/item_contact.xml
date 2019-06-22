@@ -11,11 +11,13 @@
         android:id="@+id/img_contact"
         android:layout_width="40dp"
         android:layout_height="40sp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_goneMarginBottom="8dp" />
@@ -24,12 +26,14 @@
         android:id="@+id/name_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Contact Name"
+        android:textColor="#ffffff"
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/title"
         app:layout_constraintLeft_toRightOf="@id/img_contact"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -37,14 +41,22 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:text="Doctor"
+        android:textColor="#ffffff"
         android:textSize="05sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/img_contact"
-        app:layout_constraintStart_toEndOf="@+id/img_contact"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/name_contact"
         app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="70dp" />
 </android.support.constraint.ConstraintLayout>
