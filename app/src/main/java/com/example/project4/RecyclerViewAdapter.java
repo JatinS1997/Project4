@@ -20,11 +20,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
     Context mContext;
-    List<Contact> mData;
+    List<ContactData> mData;
     Dialog myDialog;
 
 
-    public RecyclerViewAdapter(Context mContext, List<Contact> mData) {
+    public RecyclerViewAdapter(Context mContext, List<ContactData> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }

@@ -8,18 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentFav extends Fragment {
+public class FragmentFavTabs extends Fragment {
 
     View v;
 
-    public FragmentFav() {
+    public FragmentFavTabs() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        v=inflater.inflate(R.layout.fav_fragment,container,false);
+        v=inflater.inflate(R.layout.fav_fragment_tabs,container,false);
 
 
         return v;

@@ -1,6 +1,6 @@
 package com.example.project4;
 
-public class Contact {
+public class ContactData {
 
 
     private String Name;
@@ -8,12 +8,12 @@ public class Contact {
     private int Photo;
 
 
-    public Contact(){
+    public ContactData(){
 
 
     }
 
-    public Contact(String name, String title, int photo) {
+    public ContactData(String name, String title, int photo) {
         Name = name;
         Title = title;
         Photo = photo;
