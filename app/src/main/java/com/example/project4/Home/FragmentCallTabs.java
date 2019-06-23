@@ -1,4 +1,4 @@
-package com.example.project4;
+package com.example.project4.Home;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,20 +8,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentFavTabs extends Fragment {
+import com.example.project4.R;
+
+public class FragmentCallTabs extends Fragment {
 
     View v;
 
-    public FragmentFavTabs() {
+
+
+    public FragmentCallTabs() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        v=inflater.inflate(R.layout.fav_fragment_tabs,container,false);
-
-
+        v=inflater.inflate(R.layout.call_fragment_tabs,container,false);
         return v;
     }
 }
