@@ -21,7 +21,7 @@ public class FragmentFavTabs extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        v=inflater.inflate(R.layout.fav_fragment_tabs,container,false);
+        v=inflater.inflate(R.layout.tabs_fav_fragment,container,false);
 
 
         return v;

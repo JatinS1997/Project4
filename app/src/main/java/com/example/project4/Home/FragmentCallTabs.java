@@ -23,7 +23,7 @@ public class FragmentCallTabs extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        v=inflater.inflate(R.layout.call_fragment_tabs,container,false);
+        v=inflater.inflate(R.layout.tabs_call_fragment,container,false);
         return v;
     }
 }
