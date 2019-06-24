@@ -78,4 +78,11 @@ public class CalenderFragmentBottom extends AppCompatActivity {
             return false;
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(CalenderFragmentBottom.this, MainActivity.class));
+        finish();
+    }
 }

@@ -78,4 +78,11 @@ public class SettingsFragmentBottom extends AppCompatActivity {
             return false;
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(SettingsFragmentBottom.this, MainActivity.class));
+        finish();
+    }
 }

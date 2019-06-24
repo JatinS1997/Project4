@@ -80,4 +80,11 @@ public class FavouriteFragmentBottom extends AppCompatActivity {
             return false;
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(FavouriteFragmentBottom.this, MainActivity.class));
+        finish();
+    }
 }

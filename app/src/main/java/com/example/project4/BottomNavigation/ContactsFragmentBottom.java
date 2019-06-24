@@ -80,4 +80,10 @@ public class ContactsFragmentBottom extends AppCompatActivity {
             return false;
         }
     };
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(ContactsFragmentBottom.this, MainActivity.class));
+        finish();
+    }
 }
