@@ -1,4 +1,4 @@
-package com.example.project4.BottomNavigation;
+package com.example.project4.bottomNavigation;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
 import com.example.project4.R;
 
@@ -65,7 +66,7 @@ public class FavouriteFragmentBottom extends AppCompatActivity {
                     Toast.makeText(FavouriteFragmentBottom.this,"Working Favourites",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.contacts:
-                    Intent intent4 = new Intent(FavouriteFragmentBottom.this,ContactsFragmentBottom.class);
+                    Intent intent4 = new Intent(FavouriteFragmentBottom.this, ContactsFragmentBottom.class);
                     startActivity(intent4);
                     Toast.makeText(FavouriteFragmentBottom.this,"Working Contacts",Toast.LENGTH_SHORT).show();
                     break;

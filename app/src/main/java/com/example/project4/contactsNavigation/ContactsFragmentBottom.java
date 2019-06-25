@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.project4.bottomNavigation.CalenderFragmentBottom;
@@ -24,6 +25,7 @@ public class ContactsFragmentBottom extends AppCompatActivity {
     private Context context = ContactsFragmentBottom.this;
     private static final int ACTIVITY_NUM = 3;
     private ClickHandler clickHandler;
+    private Contacts_DB contacts_db;
 
 
     @Override
@@ -43,13 +45,21 @@ public class ContactsFragmentBottom extends AppCompatActivity {
         // Data Binding
 
         BottomContactsBinding bottomContactsBinding = DataBindingUtil.setContentView(this,R.layout.bottom_contacts);
-        Contacts_DB contacts_db = new Contacts_DB("Jatin","Sharma");
+
+
+
+        contacts_db = new Contacts_DB();
+        contacts_db.setFirstname("Jatin");
+        contacts_db.setLastname("Sharma");
         bottomContactsBinding.setContact(contacts_db);
+
+//        Contacts_DB contacts_db = new Contacts_DB("Jatin","Sharma");
+//        bottomContactsBinding.setContact(contacts_db);
 
 
         //clickhandler for DataBinding Layout Button
 
-        clickHandler = new ClickHandler(this);
+        clickHandler = new ClickHandler(bottomContactsBinding.secondLayout.firstnameEnter,bottomContactsBinding.secondLayout.lastnameEnter);
         bottomContactsBinding.secondLayout.setClickhandler(clickHandler);
     }
 
@@ -114,19 +124,28 @@ public class ContactsFragmentBottom extends AppCompatActivity {
 
     public class ClickHandler {
 
-        private Context context;
+        private EditText fname,lname;
 
-        public ClickHandler(Context context)
+        public ClickHandler(EditText fname,EditText lname)
+
         {
-            this.context = context;
+            this.fname = fname;
+            this.lname = lname;
+
+
         }
 
-
-        public void simpleButtonClick(View v)
+        public void updateUser(View v)
         {
+            contacts_db.setFirstname(fname.getText().toString());
+            contacts_db.setLastname(lname.getText().toString());
+            fname.setText("");
+            lname.setText("");
 
-            Toast.makeText(context,"Simple Button Click",Toast.LENGTH_SHORT).show();
+
+
         }
+
     }
 
 }

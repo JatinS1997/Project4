@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:bind="http://schemas.android.com/apk/res-auto"
     >
-    
-    
+
+
     <data>
         <variable
             name="contact"
@@ -15,7 +15,7 @@
         <variable
             name="clickhandler"
             type="com.example.project4.contactsNavigation.ContactsFragmentBottom.ClickHandler" />
-        
+
     </data>
     
 <android.support.design.widget.CoordinatorLayout

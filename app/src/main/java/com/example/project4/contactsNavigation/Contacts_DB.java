@@ -1,12 +1,36 @@
 package com.example.project4.contactsNavigation;
 
-public class Contacts_DB {
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+
+import com.android.databinding.library.baseAdapters.BR;
+
+public class Contacts_DB extends BaseObservable {
 
 
-    public final String firstname,lastname;
+    public String firstname,lastname;
 
-    public Contacts_DB(String firstname, String lastname) {
+    @Bindable
+    public String getFirstname() {
+        return firstname;
+    }
+
+
+
+    public void setFirstname(String firstname) {
         this.firstname = firstname;
+        notifyPropertyChanged(BR.firstname);
+    }
+
+    @Bindable
+    public String getLastname() {
+        return lastname;
+    }
+
+
+
+    public void setLastname(String lastname) {
         this.lastname = lastname;
+        notifyPropertyChanged(BR.lastname);
     }
 }
