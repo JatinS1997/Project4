@@ -16,6 +16,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+}
+
+repositories {
+
+    mavenCentral()
 }
 
 dependencies {
@@ -29,4 +35,10 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
+
+
+
+    //Rounded Corners for Imageview
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 }
