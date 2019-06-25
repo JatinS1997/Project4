@@ -26,7 +26,7 @@ public class BottomNavigationViewHelper {
 
                 switch (menuItem.getItemId()){
 
-                    case R.id.home:
+                    case R.id.home_fav:
                         Intent intent1 = new Intent(context,MainActivity.class); //Activity_num=0
                         context.startActivity(intent1);
                         Toast.makeText(context,"Clicked it",Toast.LENGTH_SHORT).show();

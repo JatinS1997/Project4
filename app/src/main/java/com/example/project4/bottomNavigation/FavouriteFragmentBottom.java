@@ -5,11 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
+import android.support.constraint.ConstraintSet;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+
 
 import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
@@ -18,6 +24,11 @@ import com.example.project4.R;
 public class FavouriteFragmentBottom extends AppCompatActivity {
     private Context context = FavouriteFragmentBottom.this;
     private static final int ACTIVITY_NUM = 2;
+
+    private ConstraintLayout constraintLayout;
+    private ConstraintSet constraintSet1 = new ConstraintSet();
+    private ConstraintSet constraintSet2 = new ConstraintSet();
+    private boolean altLayout;
 
 
     @Override
@@ -30,6 +41,30 @@ public class FavouriteFragmentBottom extends AppCompatActivity {
         Menu menu = bottomview.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+
+
+
+        //Constraints Animation
+
+        constraintLayout= findViewById(R.id.home_fav);
+        constraintSet1.clone(constraintLayout);
+        constraintSet2.clone(this,R.layout.bottom_favourites2);
+    }
+
+
+    public void click(View v){
+        Log.d("click", "click: Clicked");
+        TransitionManager.beginDelayedTransition(constraintLayout);
+
+        if(!altLayout){
+            constraintSet2.applyTo(constraintLayout);
+            altLayout=true;
+
+        }else{
+            constraintSet1.applyTo(constraintLayout);
+            altLayout=false;
+        }
+
     }
 
 
@@ -50,7 +85,7 @@ public class FavouriteFragmentBottom extends AppCompatActivity {
 
             switch (menuItem.getItemId()){
 
-                case R.id.home:
+                case R.id.home_fav:
                     Intent intent1 = new Intent(FavouriteFragmentBottom.this,MainActivity.class);
                     startActivity(intent1);
                     Toast.makeText(FavouriteFragmentBottom.this,"Working Home",Toast.LENGTH_SHORT).show();

@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             switch (menuItem.getItemId()) {
 
-                case R.id.home:
+                case R.id.home_fav:
 //                    Intent intent1 = new Intent(MainActivity.this,HomeFragmentBottom.class);
 //                    startActivity(intent1);
                     Toast.makeText(MainActivity.this, "Working Home", Toast.LENGTH_SHORT).show();

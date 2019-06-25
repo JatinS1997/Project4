@@ -8,6 +8,7 @@
 
 
     <data>
+
         <variable
             name="contact"
             type="com.example.project4.contactsNavigation.Contacts_DB" />
@@ -15,6 +16,7 @@
         <variable
             name="clickhandler"
             type="com.example.project4.contactsNavigation.ContactsFragmentBottom.ClickHandler" />
+
 
     </data>
     
@@ -24,7 +26,7 @@
     android:background="#ffffff">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/home"
+        android:id="@+id/home_fav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff">
@@ -37,7 +39,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_width="match_parent"
             bind:contact = "@{contact}"
 

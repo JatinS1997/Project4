@@ -81,7 +81,7 @@ public class ContactsFragmentBottom extends AppCompatActivity {
 
             switch (menuItem.getItemId()){
 
-                case R.id.home:
+                case R.id.home_fav:
                     Intent intent1 = new Intent(ContactsFragmentBottom.this,MainActivity.class);
                     startActivity(intent1);
                     Toast.makeText(ContactsFragmentBottom.this,"Working Home",Toast.LENGTH_SHORT).show();

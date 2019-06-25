@@ -48,7 +48,7 @@ public class CalenderFragmentBottom extends AppCompatActivity {
 
             switch (menuItem.getItemId()){
 
-                case R.id.home:
+                case R.id.home_fav:
                     Intent intent1 = new Intent(CalenderFragmentBottom.this,MainActivity.class);
                     startActivity(intent1);
                     Toast.makeText(CalenderFragmentBottom.this,"Working Home",Toast.LENGTH_SHORT).show();
