@@ -1,4 +1,4 @@
-package com.example.project4.BottomNavigation;
+package com.example.project4.bottomNavigation;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
 import com.example.project4.R;
 
@@ -39,7 +40,7 @@ public class BottomNavigationViewHelper {
                         context.startActivity(intent3);
                         break;
                     case R.id.contacts:
-                        Intent intent4 = new Intent(context,ContactsFragmentBottom.class); //Activity_num=3
+                        Intent intent4 = new Intent(context, ContactsFragmentBottom.class); //Activity_num=3
                         context.startActivity(intent4);
                         break;
                     case R.id.settings:

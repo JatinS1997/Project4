@@ -16,11 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BottomNavigation.HomeFragmentBottom"/>
-        <activity android:name=".BottomNavigation.ContactsFragmentBottom"/>
-        <activity android:name=".BottomNavigation.CalenderFragmentBottom"/>
-        <activity android:name=".BottomNavigation.FavouriteFragmentBottom"/>
-        <activity android:name=".BottomNavigation.SettingsFragmentBottom"/>
+        <activity android:name=".bottomNavigation.HomeFragmentBottom"/>
+        <activity android:name=".contactsNavigation.ContactsFragmentBottom"/>
+        <activity android:name=".bottomNavigation.CalenderFragmentBottom"/>
+        <activity android:name=".bottomNavigation.FavouriteFragmentBottom"/>
+        <activity android:name=".bottomNavigation.SettingsFragmentBottom"/>
     </application>
 
 </manifest>

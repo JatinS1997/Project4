@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="contact"
+            type="com.example.project4.contactsNavigation.Contacts_DB" />
+
+        <variable
+            name="clickhandler"
+            type="com.example.project4.contactsNavigation.ContactsFragmentBottom.ClickHandler" />
+
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contact.firstname}"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@id/lastname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+
+        <TextView
+            android:id="@+id/lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{contact.lastname}"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstname" />
+
+        <Button
+            android:id="@+id/button_databinding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple Click"
+            android:layout_margin="20dp"
+            android:onClick="@{clickhandler::simpleButtonClick}"
+            app:layout_constraintTop_toBottomOf="@id/lastname"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+</layout>

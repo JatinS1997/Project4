@@ -17,6 +17,8 @@ android {
         }
     }
 
+    dataBinding {enabled = true}
+
 }
 
 repositories {
