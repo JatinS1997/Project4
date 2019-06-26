@@ -43,4 +43,5 @@ dependencies {
     //Rounded Corners for Imageview
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
 }
