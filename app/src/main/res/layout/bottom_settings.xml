@@ -13,40 +13,41 @@
         android:background="#ffffff">
 
 
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/customshape"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/gradient_list"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/under_construction"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.191"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="hello"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/customshape"
-            app:layout_constraintEnd_toEndOf="@+id/customshape"
-            app:layout_constraintStart_toStartOf="@+id/customshape"
-            app:layout_constraintTop_toTopOf="@+id/customshape" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Setings"
-            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-            app:layout_constraintLeft_toRightOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:src="@drawable/under_construction"
+            android:background="#4C53DB"
+            
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="Under Construction"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/blogger_sans_bold"
+
+
+            app:layout_constraintBottom_toBottomOf="@id/under_construction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="@id/under_construction"
+            app:layout_constraintVertical_bias="0.123" />
+
 
 
 

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CalendarView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.project4.MainActivity;
@@ -28,6 +29,7 @@ public class CalenderViewActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +44,11 @@ public class CalenderViewActivity extends AppCompatActivity {
         menuItem.setChecked(true);
 
 
-        mCalenderView = (CalendarView) findViewById(R.id.calendarView2);
+        //calender background images
+//        ImageView imageview = (ImageView) findViewById(R.id.backgroundblurred);
+
+
+                mCalenderView = (CalendarView) findViewById(R.id.calendarView2);
 
 
         mCalenderView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {

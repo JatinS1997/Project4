@@ -21,6 +21,7 @@
         <activity android:name=".calenderNavigation.CalenderFragmentBottom"/>
         <activity android:name=".bottomNavigation.FavouriteFragmentBottom"/>
         <activity android:name=".bottomNavigation.SettingsFragmentBottom"/>
+        <activity android:name=".calenderNavigation.CalenderViewActivity"/>
     </application>
 
 </manifest>

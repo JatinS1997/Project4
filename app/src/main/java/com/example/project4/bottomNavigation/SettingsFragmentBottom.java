@@ -18,6 +18,8 @@ import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
 import com.example.project4.R;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class SettingsFragmentBottom extends AppCompatActivity {
     private Context context = SettingsFragmentBottom.this;
     private static final int ACTIVITY_NUM = 4;
@@ -25,6 +27,7 @@ public class SettingsFragmentBottom extends AppCompatActivity {
 
     private AnimationDrawable animationDrawable;
     ConstraintLayout constraintLayout;
+    GifImageView gifImageView;
 
 
     @Override
@@ -38,11 +41,18 @@ public class SettingsFragmentBottom extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
 
-        constraintLayout = (ConstraintLayout) findViewById(R.id.customshape);
-        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
-        animationDrawable.start();
+
+
+        //Gif Image View
+
+        gifImageView = (GifImageView) findViewById(R.id.under_construction);
+
+
+//        constraintLayout = (ConstraintLayout) findViewById(R.id.customshape);
+//        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+//        animationDrawable.setEnterFadeDuration(2000);
+//        animationDrawable.setExitFadeDuration(4000);
+//        animationDrawable.start();
 
     }
 
