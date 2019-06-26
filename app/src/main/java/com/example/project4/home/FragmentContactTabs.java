@@ -59,21 +59,21 @@ public class FragmentContactTabs extends Fragment {
 
         firstContactTabs = new ArrayList<>();
         firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_1));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_2));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_3));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_4));
+        firstContactTabs.add(new ContactData("Himanshu Kumar", "Accountant", R.drawable.pic_2));
+        firstContactTabs.add(new ContactData("Shubham Tyagi", "Cricketer", R.drawable.pic_3));
         firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_5));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_1));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_2));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_3));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_4));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_5));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_1));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_2));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_3));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_4));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_5));
-        firstContactTabs.add(new ContactData("Jatin Sharma", "Doctor", R.drawable.pic_1));
+        firstContactTabs.add(new ContactData("Praveen Kumar", "Racer", R.drawable.pic_4));
+        firstContactTabs.add(new ContactData("Amrit Chugh", "Doctor", R.drawable.pic_1));
+        firstContactTabs.add(new ContactData("Dilip Pramanik", "Branch Manager", R.drawable.pic_2));
+        firstContactTabs.add(new ContactData("Vipin Kesari", "Site Manager", R.drawable.pic_3));
+        firstContactTabs.add(new ContactData("Varum Kalia", "Key Accounts Manager", R.drawable.pic_4));
+        firstContactTabs.add(new ContactData("Nitin Sarohi", "Singer", R.drawable.pic_5));
+        firstContactTabs.add(new ContactData("Manish Kumar", "Billing Head", R.drawable.pic_1));
+        firstContactTabs.add(new ContactData("Gopal Jha", "Collection Head", R.drawable.pic_2));
+        firstContactTabs.add(new ContactData("Sachin Sharma", "HR", R.drawable.pic_3));
+        firstContactTabs.add(new ContactData("Mahinder Kumar", "Business Develpopment", R.drawable.pic_4));
+        firstContactTabs.add(new ContactData("Achint Tyagi", "MIS", R.drawable.pic_5));
+        firstContactTabs.add(new ContactData("Ashwani Asthana", "Key Account Manager", R.drawable.pic_1));
     }
 }
 

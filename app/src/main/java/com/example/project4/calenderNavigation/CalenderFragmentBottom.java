@@ -1,4 +1,4 @@
-package com.example.project4.bottomNavigation;
+package com.example.project4.calenderNavigation;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,8 +9,13 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project4.bottomNavigation.FavouriteFragmentBottom;
+import com.example.project4.bottomNavigation.SettingsFragmentBottom;
 import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
 import com.example.project4.R;
@@ -18,6 +23,9 @@ import com.example.project4.R;
 public class CalenderFragmentBottom extends AppCompatActivity {
     private Context context = CalenderFragmentBottom.this;
     private static final int ACTIVITY_NUM = 1;
+
+    private TextView thedate;
+    private Button buttontocalender;
 
 
     @Override
@@ -30,9 +38,30 @@ public class CalenderFragmentBottom extends AppCompatActivity {
         Menu menu = bottomview.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+
+
+        //date and button on CalenderViewActivity
+
+        thedate = (TextView) findViewById(R.id.date);
+        buttontocalender = (Button) findViewById(R.id.buttongotocalender);
+
+
+        Intent incomingintent = getIntent();
+        String date = incomingintent.getStringExtra("date");
+        thedate.setText(date);
+
+
+        buttontocalender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CalenderViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-//    private void setupBottomNavigationView(){
+    //    private void setupBottomNavigationView(){
 //        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 //        BottomNavigationViewHelper.enableNavigation(context, bottomNavigationView);
 //        Menu menu = bottomNavigationView.getMenu();
@@ -59,7 +88,7 @@ public class CalenderFragmentBottom extends AppCompatActivity {
                     Toast.makeText(CalenderFragmentBottom.this,"Working Calender",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.favourites:
-                    Intent intent3 = new Intent(CalenderFragmentBottom.this,FavouriteFragmentBottom.class);
+                    Intent intent3 = new Intent(CalenderFragmentBottom.this, FavouriteFragmentBottom.class);
                     startActivity(intent3);
                     Toast.makeText(CalenderFragmentBottom.this,"Working Favourites",Toast.LENGTH_SHORT).show();
                     break;
@@ -69,7 +98,7 @@ public class CalenderFragmentBottom extends AppCompatActivity {
                     Toast.makeText(CalenderFragmentBottom.this,"Working Contacts",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.settings:
-                    Intent intent5 = new Intent(CalenderFragmentBottom.this,SettingsFragmentBottom.class);
+                    Intent intent5 = new Intent(CalenderFragmentBottom.this, SettingsFragmentBottom.class);
                     startActivity(intent5);
                     Toast.makeText(CalenderFragmentBottom.this,"Working Settings",Toast.LENGTH_SHORT).show();
                     break;

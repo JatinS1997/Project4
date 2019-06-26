@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.project4.calenderNavigation.CalenderFragmentBottom;
 import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
 import com.example.project4.R;
@@ -32,7 +33,7 @@ public class BottomNavigationViewHelper {
                         Toast.makeText(context,"Clicked it",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.calender:
-                        Intent intent2 = new Intent(context,CalenderFragmentBottom.class); //Activity_num=1
+                        Intent intent2 = new Intent(context, CalenderFragmentBottom.class); //Activity_num=1
                         context.startActivity(intent2);
                         break;
                     case R.id.favourites:

@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.project4.bottomNavigation.CalenderFragmentBottom;
+import com.example.project4.calenderNavigation.CalenderFragmentBottom;
 import com.example.project4.bottomNavigation.FavouriteFragmentBottom;
 import com.example.project4.bottomNavigation.SettingsFragmentBottom;
 import com.example.project4.MainActivity;
@@ -65,7 +65,7 @@ public class ContactsFragmentBottom extends AppCompatActivity {
 
 
 
-//    private void setupBottomNavigationView(){
+    //    private void setupBottomNavigationView(){
 //        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 //        BottomNavigationViewHelper.enableNavigation(context, bottomNavigationView);
 //        Menu menu = bottomNavigationView.getMenu();
@@ -82,29 +82,29 @@ public class ContactsFragmentBottom extends AppCompatActivity {
             switch (menuItem.getItemId()){
 
                 case R.id.home_fav:
-                    Intent intent1 = new Intent(ContactsFragmentBottom.this,MainActivity.class);
+                    Intent intent1 = new Intent(context,MainActivity.class);
                     startActivity(intent1);
-                    Toast.makeText(ContactsFragmentBottom.this,"Working Home",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"Working Home",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.calender:
-                    Intent intent2 = new Intent(ContactsFragmentBottom.this, CalenderFragmentBottom.class);
+                    Intent intent2 = new Intent(context, CalenderFragmentBottom.class);
                     startActivity(intent2);
-                    Toast.makeText(ContactsFragmentBottom.this,"Working Calender",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"Working Calender",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.favourites:
-                    Intent intent3 = new Intent(ContactsFragmentBottom.this, FavouriteFragmentBottom.class);
+                    Intent intent3 = new Intent(context,FavouriteFragmentBottom.class);
                     startActivity(intent3);
-                    Toast.makeText(ContactsFragmentBottom.this,"Working Favourites",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"Working Favourites",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.contacts:
-//                    Intent intent4 = new Intent(ContactsFragmentBottom.this,ContactsFragmentBottom.class);
-//                    startActivity(intent4);
-                    Toast.makeText(ContactsFragmentBottom.this,"Working Contacts",Toast.LENGTH_SHORT).show();
+//                Intent intent4 = new Intent(context, ContactsFragmentBottom.class);
+//                startActivity(intent4);
+                    Toast.makeText(context,"Working Contacts",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.settings:
-                    Intent intent5 = new Intent(ContactsFragmentBottom.this, SettingsFragmentBottom.class);
+                    Intent intent5 = new Intent(context,SettingsFragmentBottom.class);
                     startActivity(intent5);
-                    Toast.makeText(ContactsFragmentBottom.this,"Working Settings",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"Working Settings",Toast.LENGTH_SHORT).show();
                     break;
 
             }
@@ -112,6 +112,9 @@ public class ContactsFragmentBottom extends AppCompatActivity {
             return false;
         }
     };
+
+
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

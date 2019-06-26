@@ -2,15 +2,18 @@ package com.example.project4.bottomNavigation;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.project4.calenderNavigation.CalenderFragmentBottom;
 import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
 import com.example.project4.R;
@@ -18,6 +21,10 @@ import com.example.project4.R;
 public class SettingsFragmentBottom extends AppCompatActivity {
     private Context context = SettingsFragmentBottom.this;
     private static final int ACTIVITY_NUM = 4;
+
+
+    private AnimationDrawable animationDrawable;
+    ConstraintLayout constraintLayout;
 
 
     @Override
@@ -30,9 +37,16 @@ public class SettingsFragmentBottom extends AppCompatActivity {
         Menu menu = bottomview.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+
+        constraintLayout = (ConstraintLayout) findViewById(R.id.customshape);
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
+
     }
 
-//    private void setupBottomNavigationView(){
+    //    private void setupBottomNavigationView(){
 //        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 //        BottomNavigationViewHelper.enableNavigation(context, bottomNavigationView);
 //        Menu menu = bottomNavigationView.getMenu();
@@ -54,7 +68,7 @@ public class SettingsFragmentBottom extends AppCompatActivity {
                     Toast.makeText(SettingsFragmentBottom.this,"Working Home",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.calender:
-                    Intent intent2 = new Intent(SettingsFragmentBottom.this,CalenderFragmentBottom.class);
+                    Intent intent2 = new Intent(SettingsFragmentBottom.this, CalenderFragmentBottom.class);
                     startActivity(intent2);
                     Toast.makeText(SettingsFragmentBottom.this,"Working Calender",Toast.LENGTH_SHORT).show();
                     break;

@@ -15,7 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.project4.bottomNavigation.CalenderFragmentBottom;
+import com.example.project4.calenderNavigation.CalenderFragmentBottom;
 import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.bottomNavigation.FavouriteFragmentBottom;
 import com.example.project4.bottomNavigation.SettingsFragmentBottom;
@@ -163,6 +163,14 @@ public class MainActivity extends AppCompatActivity {
 //        dialogsort.show();
 //
 //    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 
 
 

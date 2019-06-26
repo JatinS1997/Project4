@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Toast;
 
 
+import com.example.project4.calenderNavigation.CalenderFragmentBottom;
 import com.example.project4.contactsNavigation.ContactsFragmentBottom;
 import com.example.project4.MainActivity;
 import com.example.project4.R;
@@ -69,7 +70,7 @@ public class FavouriteFragmentBottom extends AppCompatActivity {
 
 
 
-//    private void setupBottomNavigationView(){
+    //    private void setupBottomNavigationView(){
 //        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 //        BottomNavigationViewHelper.enableNavigation(context, bottomNavigationView);
 //        Menu menu = bottomNavigationView.getMenu();
@@ -91,7 +92,7 @@ public class FavouriteFragmentBottom extends AppCompatActivity {
                     Toast.makeText(FavouriteFragmentBottom.this,"Working Home",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.calender:
-                    Intent intent2 = new Intent(FavouriteFragmentBottom.this,CalenderFragmentBottom.class);
+                    Intent intent2 = new Intent(FavouriteFragmentBottom.this, CalenderFragmentBottom.class);
                     startActivity(intent2);
                     Toast.makeText(FavouriteFragmentBottom.this,"Working Calender",Toast.LENGTH_SHORT).show();
                     break;

@@ -20,4 +20,20 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+
+        <item name="android:fontFamily">
+            @font/blogger_sans_medium
+        </item>
+
+    </style>
+
+    <style name="TabTheme" parent="ThemeOverlay.AppCompat.Light">
+
+        <item name="android:fontFamily">
+            @font/blogger_sans_light
+        </item>
+
+    </style>
+
 </resources>

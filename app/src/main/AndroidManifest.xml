@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".bottomNavigation.HomeFragmentBottom"/>
         <activity android:name=".contactsNavigation.ContactsFragmentBottom"/>
-        <activity android:name=".bottomNavigation.CalenderFragmentBottom"/>
+        <activity android:name=".calenderNavigation.CalenderFragmentBottom"/>
         <activity android:name=".bottomNavigation.FavouriteFragmentBottom"/>
         <activity android:name=".bottomNavigation.SettingsFragmentBottom"/>
     </application>

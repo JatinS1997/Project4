@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:background="#ffffff"
         app:tabTextColor="#000000"
+        android:theme="@style/TabTheme"
         android:elevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
